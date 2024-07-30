@@ -1,7 +1,10 @@
 :root {
-    --left-content: 33vw;
-    --right-content: 66vw;
+    --left-content: 40vw;
+    --right-content: 60vw;
+    --quote-background-color: #F9FAFB;
+    --button-color: #596D48
 }
+
 @font-face {
     font-family: norse-bold;
     src: url(font/Norse-Bold.otf);
@@ -18,12 +21,16 @@
 body {
     height: 100vh;
     width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main {
     display: flex;
     flex-direction: row;
+    min-width: 100vw;
 }
+
+/* left side */
 
 .left-container {
     display: flex;
@@ -35,7 +42,6 @@ body {
     background-image: url(images/leafs-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
 .img-overlay {
@@ -56,7 +62,7 @@ body {
     margin-top: 200px;
     padding: 10px;
     width: var(--left-content);
-    background-color: rgba(0, 0, 0, 0.6)
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .logo {
@@ -79,4 +85,85 @@ body {
     font-size: 0.9rem;
 }
 
+/* right side */
 
+.right-container {
+    display: flex;
+    flex-direction: column;
+    width: var(--right-content);
+    min-width: 700px;
+}
+
+.dummy-text-container {
+    padding: 150px 300px 50px 50px; 
+    background-color: var(--quote-background-color);
+    margin-bottom: 30px;
+}
+
+.dummy-text-container > h2 {
+    padding-bottom: 15px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    box-shadow: 0 6px 4px -1px #E0E1E2;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    margin-bottom: 20px;
+    gap: 100px;
+}
+
+fieldset > div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #707780;
+    margin-bottom: 3px;
+}
+
+input {
+    width: 250px;
+    height: 35px;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+}
+
+button[type = submit] {
+    width: 250px;
+    height: 50px;
+    margin: 20px 50px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    font-size: 1.2rem;
+    color: white;
+}
+
+.log-in {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    gap: 10px;
+    font-weight: 550;
+}
+
+.log-in a {
+    text-decoration: none;
+    color: var(--button-color)
+}
