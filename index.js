@@ -31,7 +31,7 @@ function checkEmail() {
   const emailContent = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const isValid = emailContent.test(email.value);
 
-  errorDisplayer(email, emailError, "* email not valid!", !isValid);
+  errorDisplayer(email, emailError, "* email format not valid!", !isValid);
 }
 
 function checkPhoneNumber() {
@@ -40,14 +40,19 @@ function checkPhoneNumber() {
   const phoneContent = /^\d{10}$/;
   const isValid = phoneContent.test(phone.value);
 
-  errorDisplayer(phone, phoneError, "* phone number not valid!", !isValid);
+  errorDisplayer(phone, phoneError, "* phone number format not valid!", !isValid);
 }
 
 function checkPassword() {
   const pswdError = confirmPassword.nextElementSibling;
   const isMatch = password.value === confirmPassword.value;
+  const isEmpty = confirmPassword.value.length === 0;
 
-  errorDisplayer(confirmPassword, pswdError, "* password do not match!", !isMatch);
+  if (isEmpty) {
+    pswdError.textContent = "* confirm password is required!";
+  } else {
+    errorDisplayer(confirmPassword, pswdError, "* password do not match!", !isMatch);
+  }
 }
 
 function errorDisplayer(input, errorParagraph, message, boolean) {
