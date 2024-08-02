@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
     <title>Sign Up Form</title>
   </head>
   <body>
@@ -36,23 +37,27 @@
             <div class="inputs">
               <fieldset>
                 <div>
-                  <label for="first-mane">First Name</label>
-                  <input type="text" name="first-mane" id="first-mane" />
+                  <label for="first-name">First Name</label>
+                  <input type="text" name="first-name" id="first-name" />
+                  <p class="error"></p>
                 </div>
                 <div>
                   <label for="last-name">Last Name</label>
                   <input type="text" name="last-name" id="last-name" />
+                  <p class="error"></p>
                 </div>
               </fieldset>
 
               <fieldset>
                 <div>
                   <label for="email">Email</label>
-                  <input type="email" name="email" id="email" />
+                  <input type="text" name="email" id="email" />
+                  <p class="error"></p>
                 </div>
                 <div>
                   <label for="phone-number">Phone Number</label>
-                  <input type="number" name="phone-number" id="phone-number" />
+                  <input type="tel" name="phone-number" id="phone-number" />
+                  <p class="error"></p>
                 </div>
               </fieldset>
 
@@ -60,16 +65,18 @@
                 <div>
                   <label for="password">Password</label>
                   <input type="password" name="password" id="password" />
+                  <p class="error"></p>
                 </div>
                 <div>
                   <label for="confirm-password">Confirm Password</label>
                   <input type="password" name="confirm-password" id="confirm-password" />
+                  <p class="error"></p>
                 </div>
               </fieldset>
             </div>
+            <button type="submit">Create Account</button>
           </form>
         </div>
-        <button type="submit">Create Account</button>
         <div class="log-in">
           <p>Already have an account?</p>
           <a href="#">Log in</a>
