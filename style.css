@@ -107,13 +107,18 @@ body {
 .form-container {
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
+
+}
+
+.inputs {
+    width: 100%;
+    padding: 0 0 20px 50px;
     box-shadow: 0 6px 4px -1px #E0E1E2;
     margin-bottom: 20px;
 }
 
 .title {
-    margin-bottom: 20px;
+    margin: 0 0 20px 50px;
 }
 
 fieldset {
@@ -140,8 +145,16 @@ label {
 input {
     width: 250px;
     height: 35px;
+    padding: 0 10px;
     border: 1px solid #bebebe;
     border-radius: 5px;
+    outline-color: #3A66DD; 
+}
+
+.error {
+    padding: 5px 0 0 5px;
+    font-size: 0.8rem;
+    color: red;
 }
 
 button[type = submit] {
@@ -153,6 +166,15 @@ button[type = submit] {
     background-color: var(--button-color);
     font-size: 1.2rem;
     color: white;
+}
+
+button[type = submit]:hover {
+    background-color: #6c8654;
+    cursor: pointer;
+}
+
+button[type = submit]:active {
+    background-color: #80a064;
 }
 
 .log-in {
